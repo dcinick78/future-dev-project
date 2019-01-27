@@ -204,6 +204,7 @@ h1 {
    display:block;
    top: 62px;
    position: fixed;
+   z-index: 1000;
 }
 .nav-inner>ul {
     margin: 0;
@@ -227,7 +228,7 @@ h1 {
   width:94vW;
   padding: 30px 3vW;
   text-align:left;
-  font-size: 2rem;
+  font-size: 1.2rem;
   opacity: 1;
 }
 .nav-inner>ul>li>a:hover {
@@ -330,10 +331,11 @@ section.bg2 {
     top: 0;
     position: fixed;
     transform: translateX(0vW);
-    transition: all 1s;
-    margin-left:25vW;
-    margin-right:25vW;
+    transition: all 1s;width: 50vW;
+    margin-left: 43vW;
+    margin-right: 60px;
     opacity: 0;
+    right: 0;
   }
  .nav-inner>ul {
    margin: 0;
@@ -342,13 +344,14 @@ section.bg2 {
    width: auto;
    background: transparent;
    display:flex;
+   justify-content: flex-end;
  }
  .nav-inner>ul>li {
    padding:0;
    margin:0;
    width:auto;
    list-style-type: none;
-   flex-grow: 1;
+   justify-content:flex-end;
  }
  .nav-inner>ul>li>a {
    color: #58e274;
@@ -356,7 +359,7 @@ section.bg2 {
    display:block;
    padding: 15px 1vW;
    text-align:center;
-   font-size: 1.5rem;
+   font-size: 1.2rem;
    opacity: 1;
    width:auto;
  }
@@ -377,4 +380,13 @@ section.bg2 {
     height:70vH;
     background-size: contain;
   }
+  .nav-trigger ~ .nav-inner {
+    opacity: 1;
+  }
+  .nav-trigger:checked ~ .nav-inner {
+    opacity: 0;
+  }
+  .nav-trigger ~.nav-inner {
+    width:30vW;
+  \
 }
