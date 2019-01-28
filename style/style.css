@@ -53,16 +53,9 @@
         Structure
 */
 :root {
-    --green-color: #21edaf;
     color: #222;
     font-size: 16px;
     line-height: 1.4;
-}
-::-moz-selection {
-    background: auto;
-}
-::selection {
-    background: auto;
 }
 hr {
     display: block;
@@ -316,10 +309,10 @@ section.bg2 {
     margin-top:-20vh;
     z-index:-2;
 }
+/*
+    Media Queries
+*/
 
-@media only screen and (min-width: 480px) {
-
-}
 @media only screen and (min-width: 768px) {
   header.wrapper {
     background-position: center 15%;
