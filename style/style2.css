@@ -9,7 +9,10 @@ html * {
   display: flex;
   flex-wrap: wrap;
 }
-
+.hover-text{
+  padding-top:5rem;
+  font-size: 2.5rem;
+}
 .hover-text>b {
   text-transform:uppercase;
 }
@@ -54,23 +57,25 @@ html * {
 }
 .button-white {
     display: inline-block;
+    cursor: pointer;
+    vertical-align: middle;
+    transition: .25s all ease-in-out;
+
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: .06em;
+    font-size: 1.2rem;
+    line-height: 20px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     text-align: center;
-    cursor: pointer;
-    vertical-align: middle;
-    transition: .25s all ease-in-out;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: .06em;
-    font-size: 1.2rem;;
-    line-height: 20px;
+    font-weight: 600;
+    color: #2ed3ae;
+
     border-radius: 2px;
     border: 1px solid #fff;
-    font-weight: 600;
     padding: 19px 42px 17px;
-    color: #2ed3ae;
     background-color: #fff;
 }
 .button-white:hover {
@@ -93,6 +98,7 @@ html * {
   font-size: 2rem;
   margin-top:1rem;
   margin-bottom:0rem;
+  color:#fff;
 }
 .divider-inner h4{
   margin:0.5rem;
@@ -113,6 +119,15 @@ html * {
     margin-right:2%;
     margin-bottom:2%;
   }
+  .hover-text{
+    padding-top:3rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .item-inner {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 }
 
 
@@ -130,5 +145,12 @@ html * {
     margin-right:1%;
     margin-bottom:1%;
   }
+  .hover-text{
+    padding-top:2.5rem;
+    font-size: 1.2rem;
+  }
   .item-inner {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
 }
