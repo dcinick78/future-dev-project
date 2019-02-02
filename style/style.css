@@ -2,6 +2,59 @@
         Animations
 */
 
+/* footer css3 effect text animation */
+.text--line {
+  font-size: .5em;
+}
+.svg-effect-box svg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: .12em 100%;
+  font: 16em/1 Arial;
+  flex-grow: 3;
+}
+.text-copy {
+  fill: none;
+  stroke: white;
+  stroke-dasharray: 7% 28%;
+  stroke-width: 3px;
+  -webkit-animation: stroke-offset 5s infinite ease-out;
+          animation: stroke-offset 5s infinite ease-out;
+}
+.text-copy:nth-child(1) {
+  stroke: #360745;
+  stroke-dashoffset: 7%;
+}
+.text-copy:nth-child(2) {
+  stroke: #D61C59;
+  stroke-dashoffset: 14%;
+}
+.text-copy:nth-child(3) {
+  stroke: #E7D84B;
+  stroke-dashoffset: 21%;
+}
+.text-copy:nth-child(4) {
+  stroke: #EFEAC5;
+  stroke-dashoffset: 28%;
+}
+.text-copy:nth-child(5) {
+  stroke: #1B8798;
+  stroke-dashoffset: 35%;
+}
+
+@-webkit-keyframes stroke-offset {
+  50% {
+    stroke-dashoffset: 35%;
+    stroke-dasharray: 0 87.5%;
+  }
+}
+@keyframes stroke-offset {
+  50% {
+    stroke-dashoffset: 35%;
+    stroke-dasharray: 0 87.5%;
+  }
+}
 @keyframes initiateX {
   0% {
     transform-origin:top;
@@ -125,54 +178,6 @@ html * {
 }
 
 /*
-    Header + bgs + Headlines
-*/
-
-.title {
-  background:#fff;
-  opacity: .95;
-  position: absolute;
-  right:0;
-  top:20vH;
-  width:100vW;
-  padding:0vH 3vW 0vH 3vW;
-  animation-delay: 0s;
-  transition: all .5s;
-  -webkit-transition: all .2s;
-}
-
-.title:after {
-  content: "";
-  opacity: .5;
-  background:#fff;
-  position: absolute;
-  top:100vH;
-    width:100vW;
-    left:0;
-  height:5vH;
-  transition: all .7s;
-  -webkit-transition: all .7s;
-}
-.title:hover:after {
-  top:22vH;
-  opacity: .95;
-}
-
-h1 {
-  font-family: Roboto, serif;
-  color:black;
-  font-weight: bold;
-  line-height:3.5rem;
-  font-size:3.5rem;
-}
-h1 {
-  background:#fff;
-  animation-name: floatLeft;
-  animation-duration: .7s;
-  animation-delay: .2s;
-}
-
-/*
     Menu
 */
  .nav-inner {
@@ -244,10 +249,12 @@ label[for="nav-trigger"] {
 .nav-trigger ~.nav-inner {
         transform: translateX(-50vW);
         transition: all 1s;
+        left:-50vw;
 }
 .nav-trigger:checked ~ .nav-inner {
         transform: translateX(0vW);
         transition: all 1s;
+        left:0;
 }
 .nav-trigger:checked ~ header.wrapper,
 .nav-trigger:checked ~ .content-container > section {
@@ -266,7 +273,7 @@ label[for="nav-trigger"] {
 
 
 /*
-
+    Header + bgs + Headlines
 */
 #logo {
   width: 88vW;
@@ -298,12 +305,56 @@ header.wrapper {
   position: fixed;
   background-repeat: repeat-x;
 }
+.title {
+  background:#fff;
+  opacity: .95;
+  position: absolute;
+  right:0;
+  top:20vH;
+  width:100vW;
+  padding:0vH 3vW 0vH 3vW;
+  animation-delay: 0s;
+  transition: all .5s;
+  -webkit-transition: all .2s;
+}
+
+.title:after {
+  content: "";
+  opacity: .5;
+  background:#fff;
+  position: absolute;
+  top:100vH;
+    width:100vW;
+    left:0;
+  height:5vH;
+  transition: all .7s;
+  -webkit-transition: all .7s;
+}
+.title:hover:after {
+  top:22vH;
+  opacity: .95;
+}
+
+h1 {
+  font-family: Roboto, serif;
+  color:black;
+  font-weight: bold;
+  line-height:3.5rem;
+  font-size:3.5rem;
+}
+h1 {
+  background:#fff;
+  animation-name: floatLeft;
+  animation-duration: .7s;
+  animation-delay: .2s;
+}
+
 div.content-container {
   margin-top: 83vH;
 }
 section.bg1.wrapper,
 section.bg2.wrapper {
-  height:100vH;
+  min-height:100vH;
   width:100vW;
   left:0;
   transition: left 1s;
@@ -312,7 +363,7 @@ section.bg2.wrapper {
   background-repeat: no-repeat;
   position: relative;
   background-repeat: repeat-x;
-
+  padding-bottom: 10vH;
 
   z-index:2;
 }
@@ -323,7 +374,6 @@ section.bg1 {
 }
 section.bg2 {
   background: url(../img/bg1.jpg);
-    margin-top:-20vh;
     z-index:-2;
 }
 .intro-section {
@@ -339,9 +389,21 @@ section.bg2 {
   display: inline-block;
   padding:5px;
 }
+.intro-section .image-wrapper {
+  width: 100%;
+  flex-grow: 3;
+}
+.intro-image {
+  height:auto;
+}
 .intro-section p {
   display: inline-block;
 }
+.content-container .responsive-wrapper {
+  display:flex;
+  flex-direction: column;
+}
+
 /*
     Media Queries
 */
@@ -350,6 +412,14 @@ section.bg2 {
   header.wrapper {
     background-position: center 15%;
     height:70vH;
+  }
+  .content-container .responsive-wrapper {
+    display:flex;
+    flex-direction:row;
+  }
+  .content-container .responsive-wrapper>p {
+    padding-left:5vW;
+    margin:0;
   }
   .nav-trigger ~.nav-inner {
     width:50vW;
@@ -362,6 +432,7 @@ section.bg2 {
     margin-right: 60px;
     opacity: 0;
     right: 0;
+    left:unset;
   }
  .nav-inner>ul {
    margin: 0;
@@ -392,11 +463,26 @@ section.bg2 {
  .nav-trigger:checked ~ .content-container > section {
    left:0vW;
  }
+ .nav-trigger ~ .nav-inner {
+   opacity: 1;
+   left:unset;
+ }
  .nav-trigger:checked ~ .nav-inner {
    opacity: 1;
+   left:unset;
  }
  .nav-trigger:checked ~ .nav-inner>ul>li {
    background: transparent;
+ }
+ .nav-trigger ~ .fake-nav-bg {
+   background: rgba(0,0,0,0.7);
+   transition: all .7s;
+   position: fixed;
+ }
+ .nav-trigger:checked ~ .fake-nav-bg {
+   background: rgba(0,0,0,0);
+   transition: all .7s;
+   position: fixed;
  }
 
  .title {
@@ -436,6 +522,11 @@ section.bg2 {
    animation-duration: .7s;
    animation-delay: .2s;
 
+}
+.intro-section .image-wrapper {
+  width: 300%;
+  flex-grow: 3;
+}
 }
 @media only screen and (min-width: 1200px) {
   header.wrapper {
