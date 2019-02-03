@@ -9,6 +9,11 @@ html * {
   display: flex;
   flex-wrap: wrap;
 }
+.intro-section h3 {
+  font-size: 3.5rem;
+  text-align: center;
+  margin-top:10vH;
+}
 .hover-text{
   padding-top:5rem;
   font-size: 2.5rem;
@@ -44,6 +49,9 @@ html * {
   opacity: 0;
   transition: all .5s;
   background:rgba(255,255,255,0.2);
+}
+.item:hover {
+  z-index: 1000;
 }
 .item:hover .item-inner,
 .item-inner:hover {
@@ -82,6 +90,9 @@ html * {
   background: none;
   color:#fff;
 }
+.divider {
+  position: relative;
+}
 .divider-inner {
   text-align:center;
   padding-top: 50px;
@@ -109,16 +120,13 @@ html * {
   .item {
     background: #fefefe;
     position: relative;
-    width:44%;
-    height:30%;
+    width:33%;
+    height: 33%;
     display: inline-flex;
     /* flex-grow: 1; */
     overflow:hidden;
-    padding:2%;
-    /* ony to show shadow */
-    margin-right:2%;
-    margin-bottom:2%;
   }
+
   .hover-text{
     padding-top:3rem;
     font-size: 1.5rem;
@@ -135,15 +143,15 @@ html * {
   .item {
     background: #fefefe;
     position: relative;
-    width:28%;
-    height:30%;
+    background: #fefefe;
+    position: relative;
+    width:33%;
+    height: 33%;
     display: inline-flex;
     /* flex-grow: 1; */
     overflow:hidden;
-    padding:2%;
-    /* ony to show shadow */
-    margin-right:1%;
-    margin-bottom:1%;
+    /* flex-grow: 1; */
+    overflow:hidden;
   }
   .hover-text{
     padding-top:2.5rem;
