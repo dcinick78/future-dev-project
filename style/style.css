@@ -300,7 +300,7 @@ header.wrapper {
   right:0;
   transition: left 1s;
   background: url(../img/laptop-layer-bg.png);
-  background-position: 5% -2%;
+  background-position: center 5%;
   background-repeat: no-repeat;
   background-size: cover;
   position: fixed;
@@ -414,18 +414,6 @@ section.bg2 {
   background: rgba(0,0,0,.8);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 .last-content-inner {
   background: rgba(255, 255, 255, 0.5);
   background: rgba(255, 77, 155, 0.5);
@@ -499,7 +487,6 @@ html{    background:url(http://thekitemap.com/images/feedback-img.jpg) no-repeat
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
 }
-
 .feedback-input {
 	color:#3c3c3c;
 	font-family: Helvetica, Arial, sans-serif;
@@ -517,7 +504,6 @@ html{    background:url(http://thekitemap.com/images/feedback-img.jpg) no-repeat
 	box-sizing: border-box;
   border: 3px solid rgba(0,0,0,0);
 }
-
 .feedback-input:focus{
 	background: #fff;
 	box-shadow: 0;
@@ -526,7 +512,6 @@ html{    background:url(http://thekitemap.com/images/feedback-img.jpg) no-repeat
 	outline: none;
   padding: 13px 13px 13px 54px;
 }
-
 .focused{
 	color:#30aed6;
 	border:#30aed6 solid 3px;
@@ -644,6 +629,7 @@ input:focus, textarea:focus {
     background-position: center 15%;
     height:70vH;
   }
+
   .content-container .responsive-wrapper {
     display:flex;
     flex-direction:row;
