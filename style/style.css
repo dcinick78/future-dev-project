@@ -179,9 +179,9 @@ html * {
  .nav-inner {
    width:100vW;
    display:block;
-   top: 62px;
+   top: 60px;
    position: fixed;
-   z-index: 12;
+   z-index: 22;
 }
 .nav-inner>ul {
     margin: 0;
@@ -250,20 +250,20 @@ label[for="nav-trigger"] {
   position: fixed;
 }
 .nav-trigger ~.nav-inner {
-        transform: translateX(-50vW);
+        left: -50vW;
         transition: all 1s;
-        z-index: -1;
 }
 .nav-trigger:checked ~ .nav-inner {
-        transform: translateX(0vW);
+        left:0vW;
         transition: all 1s;
-        z-index: inherit;
 }
+/*
 .nav-trigger:checked ~ header.wrapper,
-.nav-trigger:checked ~ .content-container > section {
+.nav-trigger:checked ~ .content-container > section,
+.nav-trigger:checked ~ .content-container > div.divider {
   left:50vW;
   transition: left 1s;
-}
+}*/
 .nav-trigger:checked ~ .nav-inner>ul>li {
   background: black;
 }
