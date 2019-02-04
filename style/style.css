@@ -325,6 +325,7 @@ h1 {
   font-weight: bold;
   line-height:3.5rem;
   font-size:3.5rem;
+  text-shadow: 0px 0px 1px white;
 }
 h5 {
   color:white;
@@ -726,6 +727,7 @@ input:focus, textarea:focus {
    font-weight: bold;
    line-height:3.5rem;
    font-size:3.5rem;
+   text-shadow: 0px 0px 1px white;
  }
  h1 {
    background:none;
@@ -784,7 +786,11 @@ input:focus, textarea:focus {
     top:29vH;
     opacity: .95;
   }
-  .title h1,.title h5 {
+  .title h1 {
+    color:#000;
+    text-shadow: 0px 0px 1px black;
+  }
+.title h5 {
     color:#000;
   }
   .title h1,.title h5 {
