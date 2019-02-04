@@ -181,7 +181,6 @@ html * {
    display:block;
    top: 60px;
    position: fixed;
-   z-index: 22;
 }
 .nav-inner>ul {
     margin: 0;
@@ -256,6 +255,7 @@ label[for="nav-trigger"] {
 .nav-trigger:checked ~ .nav-inner {
         left:0vW;
         transition: all 1s;
+        z-index: 22;
 }
 /*
 .nav-trigger:checked ~ header.wrapper,
