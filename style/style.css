@@ -285,6 +285,7 @@ label[for="nav-trigger"] {
   font-weight: bold;
   padding-left:15px;
   z-index:11;
+  font-family: 'Playfair Display', serif;
   /*
   background-image: linear-gradient(15deg,#22216D ,#1C1364);
   */
@@ -608,6 +609,10 @@ input:focus, textarea:focus {
   width:100%;
   background-color:white;
 }
+
+/*
+    Media Queries
+*/
 /*antipattern but w e */
 @media only screen and (max-width: 580px) {
 	#form-div{
@@ -621,9 +626,6 @@ input:focus, textarea:focus {
 }
 
 
-/*
-    Media Queries
-*/
 @media only screen and (min-width: 768px) {
   header.wrapper {
     background-position: center 15%;
@@ -679,6 +681,10 @@ input:focus, textarea:focus {
    font-size: 1.2rem;
    opacity: 1;
    width:auto;
+ }
+ .nav-inner>ul>li>a:hover {
+   color: white;
+   transition: color .5;
  }
  .nav-trigger:checked ~ header.wrapper,
  .nav-trigger:checked ~ .content-container > section {

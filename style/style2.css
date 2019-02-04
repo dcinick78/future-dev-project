@@ -126,19 +126,27 @@ html * {
     /* flex-grow: 1; */
     overflow:hidden;
   }
-
+  .hover-text>b {
+    font-size: 2rem;
+  }
   .hover-text{
-    padding-top:3rem;
+    padding-top:0rem;
     font-size: 1.5rem;
     line-height: 2rem;
   }
   .item-inner {
+    padding-top:2vH;
     padding-left: 5%;
     padding-right: 5%;
   }
 }
 
 
+@media only screen and (min-width: 900px) {
+.item-inner {
+    padding-top: 2vH;
+  }
+}
 @media only screen and (min-width: 1200px) {
   .item {
     background: #fefefe;
@@ -156,6 +164,10 @@ html * {
   .hover-text{
     padding-top:2.5rem;
     font-size: 1.2rem;
+  }
+  .hover-text>b {
+    font-size: 2.9rem;
+    text-align: center;
   }
   .item-inner {
     padding-left: 7%;
