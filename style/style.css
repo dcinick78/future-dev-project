@@ -105,10 +105,7 @@ svg:hover .text-copy {
   -webkit-clip-path: polygon(50% 0%, 100% 10%, 100% 100%, 0 100%, 0 10%);
   clip-path: polygon(50% 0%, 100% 10%, 100% 100%, 0 100%, 0 10%);
 }
-.clip-bottom {
-  -webkit-clip-path:polygon(100% 0, 100% 80%, 50% 100%, 0% 80%, 0 0);
-  clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0% 80%, 0 0);
-}
+
 .clip-right {
   -webkit-clip-path: polygon(0% 0%, 100% 0, 85% 100%, 0% 100%);
   clip-path: polygon(0% 0%, 100% 0, 85% 100%, 0% 100%);
@@ -116,6 +113,7 @@ svg:hover .text-copy {
 :root {
     color: black;
     font-size: 16px;
+    font-family: Roboto, serif;
     line-height: 1.4;
     --main-color: #180D5B;
     --highlight-color: #43E8E1;
@@ -169,133 +167,50 @@ html * {
   box-sizing: border-box;
 }
 #main-wrapper {
-  width: 100vW;
-  overflow: hidden;
+  width: 100%;
+  /*overflow: hidden;*/
 }
 
-/*
-    Menu
-*/
- .nav-inner {
-   width:100vW;
-   display:block;
-   top: 60px;
-   position: fixed;
-}
-.nav-inner>ul {
-    margin: 0;
-    padding: 0;
-    height: 100vH;
-    width: 50vw;
-    background: black;
-    display: block;
-}
-.nav-inner>ul>li> {
-    padding:0;
-    margin:0;
-    width: 50vW;
-    list-style-type: none;
-    text-decoration:none;
-}
-.nav-inner>ul>li>a {
-  color: var(--highlight-color);
-  text-decoration:none;
-  display:inline-block;
-  text-transform: lowercase;
-  width:94vW;
-  padding: 30px 3vW;
-  text-align:left;
-  font-size: 1.2rem;
-  opacity: 1;
-}
-.nav-inner>ul>li>a:hover {
-  color: white;
-  transition: all .5;
-}
-input[type="nav-trigger"] {
-  position: fixed;
-}
-label[for="nav-trigger"] {
+
+.burger-menu {
     position: fixed;
     right: 15px; top: 15px;
     z-index: 10;
     height: 30px;
     width: 30px;
+    z-index: 12;
     cursor: pointer;
     background: #fff;
     background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' fill='#fff' height='6'/><rect y='24' fill='#fff' width='30' height='6'/><rect y='12' fill='#fff' width='30' height='6'/></svg>");
     background-size: contain;
     /* needs fix for moz old*/
   }
-#nav-trigger {
-  visiblity:hidden;
-  opacity: 0;
-  top:0;
-  left:0;
-}
-.fake-nav-bg {
-  z-index: 3;
-  background: rgba(0,0,0,0);
-  width: 100vW;
-  height: 60px;
-  position: fixed;
-  top:0;
-  transition: all .7s;
-}
-#logo:hover ~ .fake-nav-bg,
-.nav-trigger:hover ~ .fake-nav-bg {
-  background: rgba(0,0,0,.7);
-  transition: all .7s;
-  position: fixed;
-}
-.nav-trigger ~.nav-inner {
-        left: -50vW;
-        transition: all 1s;
-}
-.nav-trigger:checked ~ .nav-inner {
-        left:0vW;
-        transition: all 1s;
-        z-index: 22;
-}
-/*
-.nav-trigger:checked ~ header.wrapper,
-.nav-trigger:checked ~ .content-container > section,
-.nav-trigger:checked ~ .content-container > div.divider {
-  left:50vW;
-  transition: left 1s;
-}*/
-.nav-trigger:checked ~ .nav-inner>ul>li {
-  background: black;
-}
-.nav-trigger:checked ~ .fake-nav-bg {
-  background: rgba(0,0,0,.7);
-  transition: all .7s;
-  position: fixed;
-}
+
 
 /*
     Header + bgs + Headlines
 */
 #logo {
-  width: auto;
+  width: 100%;
   height: 60px;
   position: fixed;
+  top:0;
   color: #fff;
   font-size: 2.5rem;
   font-weight: bold;
   padding-left:15px;
   z-index:11;
   font-family: 'Playfair Display', serif;
-  /*
-  background-image: linear-gradient(15deg,#22216D ,#1C1364);
-  */
+
+  background-color: rgba(0, 0, 0, 0.5);
+
 }
 header.wrapper {
   animation-name: initiateX ;
   animation-duration: .5s;
   animation-timing-function: ease-in;
   height:80vH;
-  width:100vW;
+  width:100%;
   top:0;
   left:0;
   right:0;
@@ -312,7 +227,7 @@ header.wrapper {
   position: absolute;
   right:0;
   top:20vH;
-  width:100vW;
+  width:100%;
   padding:0vH 3vW 0vH 3vW;
   animation-delay: 0s;
   transition: all .5s;
@@ -343,7 +258,7 @@ div.content-container {
 section.bg3.wrapper,
 section.bg1.wrapper,
 section.bg2.wrapper {
-  width:100vW;
+  width:100%;
   left:0;
   transition: left 1s;
   background-size: cover;
@@ -356,13 +271,10 @@ section.bg2.wrapper {
 section.bg1 {
   background: #fff;
   margin-top:-20vh;
-  z-index:-1;
-  padding-bottom: 10vH;
-  min-height:100vH;
+  padding-bottom: 30vH;
 }
 section.bg3 {
   background: #fff;
-  z-index:-2;
 }
 section.bg3 .parallax-bg {
   min-height: 50vH;/* temheight x itemcount */
@@ -384,7 +296,7 @@ section.bg2 {
 .intro-section,
 .last-content-inner {
   padding-top:10vH;
-  width:100vW;
+  width:100%;
   padding-left:10vW;
   padding-right:10vW;
 
@@ -407,11 +319,16 @@ section.bg2 {
   text-align: left;
   font-size: 2rem;
 }
+.intro-section h3 {
+  font-size: 3.5rem;
+  text-align: center;
+  margin-top:10vH;
+}
 .content-container .responsive-wrapper {
   display:flex;
   flex-direction: column;
 }
-.skill-inner{
+.skill-inner {
   height: 50vH;
   background: rgba(0,0,0,.8);
 }
@@ -456,159 +373,58 @@ section.bg2 {
   background-repeat: no-repeat;
 }
 
-/** contact form  **/
 
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+.divider {
+  position: relative;
+}
+.divider-inner {
+  text-align:center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  font-size: 'Roboto', serif;  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #2ed3ae;
+  box-sizing: border-box;
+}
+.divider-inner h3 {
+  font-size: 2rem;
+  margin-top:1rem;
+  margin-bottom:0rem;
+  color:#fff;
+}
+.divider-inner h4{
+  margin:0.5rem;
+  margin-bottom:1.5rem;
+}
+.button-white {
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: middle;
+    transition: .25s all ease-in-out;
 
-html{    background:url(http://thekitemap.com/images/feedback-img.jpg) no-repeat;
-  background-size: cover;
-  height:100%;
-}
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: .06em;
+    font-size: 1.2rem;
+    line-height: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    font-weight: 600;
+    color: #2ed3ae;
 
-#feedback-page{
-	text-align:center;
+    border-radius: 2px;
+    border: 1px solid #fff;
+    padding: 19px 42px 17px;
+    background-color: #fff;
 }
-
-#form-main{
-	width:100%;
-	padding-top:0px;
-  display: inline-block;
-}
-
-#form-div {
-	background-color:rgba(72,72,72,0.4);
-	padding-left:35px;
-	padding-right:35px;
-	padding-top:35px;
-	padding-bottom:50px;
-	width: 80vW;
-
-  display: inline-block;
-	position: relative;
-  margin-top:30px;
-  -moz-border-radius: 7px;
-  -webkit-border-radius: 7px;
-}
-.feedback-input {
-	color:#3c3c3c;
-	font-family: Helvetica, Arial, sans-serif;
-  font-weight:500;
-	font-size: 18px;
-	border-radius: 0;
-	line-height: 22px;
-	background-color: #fbfbfb;
-	padding: 13px 13px 13px 54px;
-	margin-bottom: 10px;
-	width:100%;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	box-sizing: border-box;
-  border: 3px solid rgba(0,0,0,0);
-}
-.feedback-input:focus{
-	background: #fff;
-	box-shadow: 0;
-	border: 3px solid #3498db;
-	color: #3498db;
-	outline: none;
-  padding: 13px 13px 13px 54px;
-}
-.focused{
-	color:#30aed6;
-	border:#30aed6 solid 3px;
-}
-
-/* Icons ---------------------------------- */
-#name{
-	background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
-	background-size: 30px 30px;
-	background-position: 11px 8px;
-	background-repeat: no-repeat;
-}
-
-#name:focus{
-	background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
-	background-size: 30px 30px;
-	background-position: 8px 5px;
-  background-position: 11px 8px;
-	background-repeat: no-repeat;
-}
-
-#email{
-	background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
-	background-size: 30px 30px;
-	background-position: 11px 8px;
-	background-repeat: no-repeat;
-}
-
-#email:focus{
-	background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
-	background-size: 30px 30px;
-  background-position: 11px 8px;
-	background-repeat: no-repeat;
-}
-
-#comment{
-	background-image: url(http://rexkirby.com/kirbyandson/images/comment.svg);
-	background-size: 30px 30px;
-	background-position: 11px 8px;
-	background-repeat: no-repeat;
-}
-
-textarea {
-    width: 100%;
-    height: 150px;
-    line-height: 150%;
-    resize:vertical;
-}
-
-input:hover, textarea:hover,
-input:focus, textarea:focus {
-	background-color:white;
-}
-
-#button-blue{
-	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-	float:left;
-	width: 100%;
-	border: #fbfbfb solid 4px;
-	cursor:pointer;
-	background-color: #352786;
-	color:white;
-	font-size:24px;
-	padding-top:22px;
-	padding-bottom:22px;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.3s;
-  margin-top:-4px;
-  font-weight:700;
-}
-
-#button-blue:hover{
-	background-color: rgba(0,0,0,0);
-	color: #352786;
-}
-
-.submit:hover {
-	color: #3498db;
-}
-
-.ease {
-	width: 0px;
-	height: 74px;
-	background-color: #fbfbfb;
-	-webkit-transition: .3s ease;
-	-moz-transition: .3s ease;
-	-o-transition: .3s ease;
-	-ms-transition: .3s ease;
-	transition: .3s ease;
-}
-
-.submit:hover .ease{
-  width:100%;
-  background-color:white;
+.button-white:hover {
+  background: none;
+  color:#fff;
 }
 
 /*
@@ -624,6 +440,9 @@ input:focus, textarea:focus {
 		padding-left: 3%;
 		padding-right: 3%;
 	}
+  #logo {
+    font-size: 2rem;
+  }
 }
 
 
@@ -715,7 +534,7 @@ input:focus, textarea:focus {
 
  .title {
    top:20vH;
-   width:100vW;
+   width:100%;
    animation-delay: 0s;
    transition: all .5s;
    -webkit-transition: all .2s;
@@ -764,7 +583,7 @@ input:focus, textarea:focus {
   }
   .title {
     top:25vH;
-    width:100vW;
+    width:100%;
     background:#fff;
     animation-delay: 0s;
     transition: all .5s;
@@ -776,7 +595,7 @@ input:focus, textarea:focus {
     background:#fff;
     position: absolute;
     top:100vH;
-      width:100vW;
+      width:100%;
       left:0;
     height:5vH;
     transition: all .7s;

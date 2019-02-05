@@ -14,8 +14,10 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="style/normalize.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="style/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style/skill.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="style/style2.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="style/content-slide.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style/contact-form.css" />
 </head>
 <body>
 <!--[if lt IE 8]>
@@ -25,17 +27,6 @@
 
 <div id="main-wrapper"><a href="top"></a>
   <div id="logo">Future Web Developer</div>
-  <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-  <label for="nav-trigger"></label>
-  <div class="nav-inner">
-      <ul>
-          <li><a href="#top">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
-      </ul>
-  </div>
-  <div class="fake-nav-bg"></div>
   <header class="wrapper clearfix">
 
       <div class="title"><h1><small>THE BEST</small><br>WEB SOLUTIONS</h1>
@@ -47,7 +38,7 @@
 
 
   <div class="content-container">
-      <section class="bg1 wrapper">
+      <section class="bg1 wrapper intro">
         <div class="intro-section">
           <a name="about"></a>
           <hr class="top-hr" />
@@ -61,11 +52,42 @@
                         </p>
 
           </div>
-          <br><br>
-          <hr>
-          <h3> the technology stack</h3>
-          <div class="content-wrap1">
+        </div>
+      </section>
+
+      <section class="skill-section wrapper">
+        <div class="bg-layer cut-top">
+        </div>
+        <div class="bg-layer content-inner">
+          <div class="responsive-list">
             <!-- hover item -->
+            <div class="item">
+              <img src="./img/item.jpg" width="100%" height="100%">
+              <div class="item-inner">
+                <span class="hover-text">
+                  <b>CSS3 <br>&<br> HTML 5</b>
+                </span>
+              </div>
+            </div>
+            <!-- hover item -->
+            <div class="item">
+              <img src="./img/item2.jpg" width="100%" height="100%">
+              <div class="item-inner">
+                <span class="hover-text">
+                  <b>Javascript</b><br> node.js react.js angular
+                </span>
+              </div>
+            </div>
+            <!-- hover item -->
+            <div class="item">
+              <img src="./img/footer-element.jpg" width="100%" height="100%">
+              <div class="item-inner">
+                <span class="hover-text">
+                  <b>CMS and Git</b><br> dolor sit amet
+                </span>
+              </div>
+            </div>
+
             <div class="item">
               <img src="./img/item.jpg" width="100%" height="100%">
               <div class="item-inner">
@@ -94,9 +116,14 @@
             </div>
           </div>
 
-
         </div>
+
       </section>
+
+
+
+
+
 
       <a name="skills"></a>
       <!-- divider block  -->
@@ -112,39 +139,42 @@
       <section>
 
       </section>
-      <section class="bg3 wrapper">
-        <a name="offer"></a>
-        <div class="parallax-bg" >
-          <div class="skill-inner">
 
-            <div class="slider">
-              <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav"/>
-              <input type="radio" name="slider" title="slide2" class="slider__nav"/>
-              <input type="radio" name="slider" title="slide3" class="slider__nav"/>
-              <input type="radio" name="slider" title="slide4" class="slider__nav"/>
-              <div class="slider__inner">
-                <div class="slider__contents"><i class="slider__image fa fa-home"></i>
-                  <h2 class="slider__caption">Responsive & Performance</h2>
-                  <p class="slider__txt">Etiam porttitor lectus in iaculis egestas. Pellentesque in neque sollicitudin, tempor quam vel, rhoncus felis. Integer bibendum posuere mauris id ultricies.</p>
-                </div>
-                <div class="slider__contents"><i class="slider__image fa fa-facebook"></i>
-                  <h2 class="slider__caption">Database Programming</h2>
-                  <p class="slider__txt">Etiam porttitor lectus in iaculis egestas. Pellentesque in neque sollicitudin, tempor quam vel, rhoncus felis. Integer bibendum posuere mauris id ultricies.</p>
-                </div>
-                <div class="slider__contents"><i class="slider__image fa fa-google-plus"></i>
-                  <h2 class="slider__caption">mobile apps</h2>
-                  <p class="slider__txt">Etiam porttitor lectus in iaculis egestas. Pellentesque in neque sollicitudin, tempor quam vel, rhoncus felis. Integer bibendum posuere mauris id ultricies.</p>
-                </div>
-                <div class="slider__contents"><i class="slider__image fa fa-twitter"></i>
-                  <h2 class="slider__caption">react js programming</h2>
-                  <p class="slider__txt">Etiam porttitor lectus in iaculis egestas. Pellentesque in neque sollicitudin, tempor quam vel, rhoncus felis. Integer bibendum posuere mauris id ultricies.</p>
+      <section class="bg3 wrapper">
+
+          <div class="parallax-bg" >
+            <div class="skill-inner">
+
+              <div class="slider">
+                <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav"/>
+                <input type="radio" name="slider" title="slide2" class="slider__nav"/>
+                <input type="radio" name="slider" title="slide3" class="slider__nav"/>
+                <input type="radio" name="slider" title="slide4" class="slider__nav"/>
+                <div class="slider__inner">
+                  <div class="slider__contents"><i class="slider__image fa fa-home"></i>
+                    <h2 class="slider__caption">Responsive & Performance</h2>
+                    <p class="slider__txt">Etiam porttitor lectus in iaculis egestas. Pellentesque in neque sollicitudin, tempor quam vel, rhoncus felis. Integer bibendum posuere mauris id ultricies.</p>
+                  </div>
+                  <div class="slider__contents"><i class="slider__image fa fa-facebook"></i>
+                    <h2 class="slider__caption">Database Programming</h2>
+                    <p class="slider__txt">Etiam porttitor lectus in iaculis egestas. Pellentesque in neque sollicitudin, tempor quam vel, rhoncus felis. Integer bibendum posuere mauris id ultricies.</p>
+                  </div>
+                  <div class="slider__contents"><i class="slider__image fa fa-google-plus"></i>
+                    <h2 class="slider__caption">mobile apps</h2>
+                    <p class="slider__txt">Etiam porttitor lectus in iaculis egestas. Pellentesque in neque sollicitudin, tempor quam vel, rhoncus felis. Integer bibendum posuere mauris id ultricies.</p>
+                  </div>
+                  <div class="slider__contents"><i class="slider__image fa fa-twitter"></i>
+                    <h2 class="slider__caption">react js programming</h2>
+                    <p class="slider__txt">Etiam porttitor lectus in iaculis egestas. Pellentesque in neque sollicitudin, tempor quam vel, rhoncus felis. Integer bibendum posuere mauris id ultricies.</p>
+                  </div>
                 </div>
               </div>
-            </div>
 
+            </div>
           </div>
-        </div>
+
       </section>
+
       <section class="bg2 wrapper">
         <div class="svg-bg-wrap">
         <div class="svg-effect-box">

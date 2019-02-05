@@ -1,19 +1,4 @@
-html * {
-  font-family: Roboto, serif;
-}
-
-
-.content-wrap1 {
-  margin:0 auto;
-  width:80vW;
-  display: flex;
-  flex-wrap: wrap;
-}
-.intro-section h3 {
-  font-size: 3.5rem;
-  text-align: center;
-  margin-top:10vH;
-}
+/*
 .hover-text{
   padding-top:5rem;
   font-size: 2.5rem;
@@ -30,10 +15,8 @@ html * {
   width:98%;
   height:30%;
   display: inline-flex;
-  /* flex-grow: 1; */
   overflow:hidden;
   padding:2%;
-  /* ony to show shadow */
   margin-bottom:5vH;
 }
 .item-inner {
@@ -63,58 +46,7 @@ html * {
 .item:hover {
   box-shadow: 3px 3px 10px 0 rgba(0,0,0,.1);
 }
-.button-white {
-    display: inline-block;
-    cursor: pointer;
-    vertical-align: middle;
-    transition: .25s all ease-in-out;
 
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: .06em;
-    font-size: 1.2rem;
-    line-height: 20px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-align: center;
-    font-weight: 600;
-    color: #2ed3ae;
-
-    border-radius: 2px;
-    border: 1px solid #fff;
-    padding: 19px 42px 17px;
-    background-color: #fff;
-}
-.button-white:hover {
-  background: none;
-  color:#fff;
-}
-.divider {
-  position: relative;
-}
-.divider-inner {
-  text-align:center;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  font-size: 'Roboto', serif;  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-  background-color: #2ed3ae;
-  box-sizing: border-box;
-}
-.divider-inner h3 {
-  font-size: 2rem;
-  margin-top:1rem;
-  margin-bottom:0rem;
-  color:#fff;
-}
-.divider-inner h4{
-  margin:0.5rem;
-  margin-bottom:1.5rem;
-}
 
 @media only screen and (min-width: 768px) {
   .item {
@@ -123,7 +55,6 @@ html * {
     width:33%;
     height: 33%;
     display: inline-flex;
-    /* flex-grow: 1; */
     overflow:hidden;
   }
   .hover-text>b {
@@ -156,9 +87,7 @@ html * {
     width:33%;
     height: 33%;
     display: inline-flex;
-    /* flex-grow: 1; */
     overflow:hidden;
-    /* flex-grow: 1; */
     overflow:hidden;
   }
   .hover-text{
@@ -174,3 +103,4 @@ html * {
     padding-right: 7%;
   }
 }
+*/
