@@ -1,0 +1,41 @@
+nav ul li {
+    padding:15px 1vW;
+    margin:0;
+    width: auto;
+}
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: aquamarine;
+    text-transform: uppercase;
+    transition:all .5s;
+    font-size:1.5rem;
+}
+nav ul li a:hover {
+    color:#fff;
+    transform: rotateZ(15deg);
+    transition:all .5s;
+    font-size: 3rem;
+}
+nav {
+    z-index: 1337;
+    position: fixed;
+    top:60px;left:0;right:0;
+    width:100%;
+}
+nav ul {
+    right:0;
+    display: flex;
+    justify-content: flex-end;
+    width:100%;
+    background: rgba(0,0,0,.5);
+}
+
+@media only screen and (min-width: 700px) {
+nav {
+    z-index: 1337;
+    position: fixed;
+    top:0;left:0;right:0;
+    width:100%;
+
+}

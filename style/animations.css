@@ -1,0 +1,117 @@
+@keyframes left-to-right {
+  100% {
+    left:100%;
+  }
+}
+@-webkit-keyframes check {
+  50% {
+    outline-color: #43E8E1;
+    box-shadow: 0 0 0 12px #43E8E1, 0 0 0 36px rgba(51, 51, 51, 0.2);
+  }
+  100% {
+    outline-color: #43E8E1;
+    box-shadow: 0 0 0 0 #43E8E1, 0 0 0 0 rgba(51, 51, 51, 0);
+  }
+}
+@keyframes check {
+  50% {
+    outline-color: #43E8E1;
+    box-shadow: 0 0 0 12px #43E8E1, 0 0 0 36px rgba(51, 51, 51, 0.2);
+  }
+  100% {
+    outline-color: #43E8E1;
+    box-shadow: 0 0 0 0 #43E8E1, 0 0 0 0 rgba(51, 51, 51, 0);
+  }
+}
+@-webkit-keyframes stroke-offset {
+  50% {
+    stroke-dashoffset: 35%;
+    stroke-dasharray: 0 87.5%;
+  }
+}
+@keyframes stroke-offset {
+  50% {
+    stroke-dashoffset: 35%;
+    stroke-dasharray: 0 87.5%;
+  }
+}
+@keyframes initiateX {
+  0% {
+    transform-origin:top;
+    transform:scale(0);
+  }
+  100% {
+    transform:scale(1);
+    transform-origin:top;
+  }
+}
+@keyframes floatLeft {
+  0% {
+    transform: translateX(3000px);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  20% {
+    transform: translateX(500px);
+    opacity: .1;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes showElement {
+  0%   {    opacity: 0;  }
+  100% {    opacity: 1;  }
+}
+@keyframes moveUp {
+  0% {
+    top:80vH;
+    opacity: 0;
+  }
+  100% {
+    top:60px;
+    opacity: .95;
+  }
+}
+
+
+
+/*svg effect text animation */
+.text--line {
+  font-size: .5em;
+}
+.text-copy {
+  fill: none;
+  stroke: white;
+  stroke-dasharray: 7% 28%;
+  stroke-width: 3px;
+  -webkit-animation: stroke-offset 5s infinite ease-out;
+          animation: stroke-offset 5s infinite ease-out;
+}/*
+svg:hover .text-copy {
+  animation-play-state:paused;
+}*/
+.text-copy:nth-child(1) {
+  stroke: #C0C0F6;
+  stroke-dashoffset: 7%;
+}
+.text-copy:nth-child(2) {
+  stroke: #42E8DC;
+  stroke-dashoffset: 14%;
+}
+.text-copy:nth-child(3) {
+  stroke: #36A5B8;
+  stroke-dashoffset: 21%;
+}
+.text-copy:nth-child(4) {
+  stroke: #6A72DF;
+  stroke-dashoffset: 28%;
+}
+.text-copy:nth-child(5) {
+  stroke: #fff;
+  stroke-dashoffset: 35%;
+}
